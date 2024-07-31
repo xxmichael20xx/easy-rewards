@@ -581,5 +581,5 @@ return [
     */
     'frontend_engine' => env('SHOPIFY_FRONTEND_ENGINE', 'BLADE'),
 
-    'iframe_ancestors' => '',
+    'iframe_ancestors' => 'intimate-typically-oryx.ngrok-free.app',
 ];

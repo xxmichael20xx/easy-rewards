@@ -1,15 +1,18 @@
 import React from 'react';
-import { Head } from '@inertiajs/react';
+import enTranslations from '@shopify/polaris/locales/en.json';
+import { Page, Card, AppProvider, Text } from '@shopify/polaris';
+import { PageProps } from "@/types";
 
-export default function Welcome() {
+export default function Welcome({ auth }: PageProps) {
     return (
-        <>
-            <Head title="Welcome" />
-            <div className="relative flex items-top justify-center min-h-screen bg-gray-100 dark:bg-gray-900 sm:items-center sm:pt-0">
-                <div className="max-w-6xl mx-auto sm:px-6 lg:px-8">
-                    Welcome to shopify
-                </div>
-            </div>
-        </>
+        <AppProvider i18n={enTranslations}>
+            <Page title="Inertia App">
+                <Card>
+                    <Text as="h2" variant="bodyMd">
+                        { auth?.user?.name }
+                    </Text>
+                </Card>
+            </Page>
+        </AppProvider>
     );
 }

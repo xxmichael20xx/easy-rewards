@@ -1,5 +1,6 @@
 import './bootstrap';
 import '../css/app.css';
+import '@shopify/polaris/build/esm/styles.css';
 
 import { createRoot } from 'react-dom/client';
 import { createInertiaApp } from '@inertiajs/react';
