@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="shopify-api-key" content="{{ config('shopify-app.api_key') }}" />
 
         <title inertia>{{ config('app.name', 'Laravel') }}</title>
 
@@ -15,6 +16,8 @@
         @viteReactRefresh
         @vite(['resources/js/app.tsx', "resources/js/Pages/{$page['component']}.tsx"])
         @inertiaHead
+
+        <script src="https://cdn.shopify.com/shopifycloud/app-bridge.js"></script>
     </head>
     <body class="font-sans antialiased">
         @inertia

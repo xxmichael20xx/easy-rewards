@@ -408,15 +408,11 @@ return [
     */
 
     'scripttags' => [
-        /*
-            [
-                'src' => env('SHOPIFY_SCRIPTTAG_1_SRC', 'https://some-app.com/some-controller/js-method-response'),
-                'event' => env('SHOPIFY_SCRIPTTAG_1_EVENT', 'onload'),
-                'display_scope' => env('SHOPIFY_SCRIPTTAG_1_DISPLAY_SCOPE', 'online_store')
-            ],
-            ...
-        */],
-
+        /*[
+            'src' => 'https://cdn.shopify.com/shopifycloud/app-bridge.js',
+            'event' => 'onload'
+        ],*/
+    ],
     /*
     |--------------------------------------------------------------------------
     | After Authenticate Job
