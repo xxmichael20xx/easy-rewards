@@ -7,7 +7,7 @@ use Inertia\Inertia;
 
 Route::middleware(['verify.shopify'])->group(function () {
     Route::get('/', function () {
-        return Inertia::render('Welcome');
+        return Inertia::render('Home');
     })->name('home');
 
     Route::get('/dashboard', function () {
@@ -18,6 +18,10 @@ Route::middleware(['verify.shopify'])->group(function () {
         Route::get('/profile', [ProfileController::class, 'edit'])->name('profile.edit');
         Route::patch('/profile', [ProfileController::class, 'update'])->name('profile.update');
         Route::delete('/profile', [ProfileController::class, 'destroy'])->name('profile.destroy');
+    });
+
+    Route::get('/settings', function () {
+        return Inertia::render('Settings');
     });
 });
 
